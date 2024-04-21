@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char op;
+    double num1, num2;
+
+    cout << "_____________________________" << endl;
+    cout<<"|                           |"<<endl;
+    cout << "|  Simple Calculator        :" << endl;
+    cout << "|---------------------------|" << endl;
+    cout << "| + : Addition              :" << endl;
+    cout << "|---------------------------|" << endl;
+    cout << "| - : Subtraction           :" << endl;
+    cout << "|---------------------------|" << endl;
+    cout << "| * : Multiplication        :" << endl;
+    cout << "|---------------------------|" << endl;
+    cout << "| / : Division              :" << endl;
+    cout << "|___________________________|" << endl;
+
+    cout << "Enter operator: ";
+    cin >> op;
+
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    switch (op) {
+        case '+':
+            cout << num1 << " + " << num2 << " = "  << num1 + num2 << endl;
+            break;
+        case '-':
+            cout << num1 << " - " << num2 << " = " <<  num1 - num2 << endl;
+            break;
+        case '*':
+            cout << num1 << " * " << num2 << " = " <<  num1 * num2 << endl;
+            break;
+        case '/':
+            if (num2 == 0) {
+                cout << "Error: division by zero" << endl;
+            } else {
+                cout << num1 << " / " << num2 << " = "  << num1 / num2 << endl;
+            }
+            break;
+            
+        default:
+            cout << "Invalid operator" << endl;
+    }
+
+    return 0;
+}
